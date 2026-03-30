@@ -5,7 +5,8 @@ import { TextSliderSection } from '../components/sections/TextSliderSection';
 import { ServicesSection } from '../components/sections/ServicesSection';
 import { PortfolioSection } from '../components/sections/PortfolioSection';
 import { PartnersSection } from '../components/sections/PartnersSection';
-import { VideosSection } from '../components/sections/VideosSection';
+import { ContactSection } from '../components/sections/ContactSection';
+// import { VideosSection } from '../components/sections/VideosSection';
 
 export const Home = () => {
     return (
@@ -16,7 +17,8 @@ export const Home = () => {
             <ServicesSection />
             <PortfolioSection />
             <PartnersSection />
-            <VideosSection />
+            <ContactSection />
+            {/* <VideosSection /> */}
         </main>
     );
 };

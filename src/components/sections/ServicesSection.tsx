@@ -12,35 +12,20 @@ export const ServicesSection = () => {
                 <div className="grid md:grid-cols-3 gap-8">
                     <Reveal direction="up" delay={0.1} className="p-10 border border-primary/10 bg-background-dark hover:border-primary/50 transition-all group expertise-card">
                         <span className="material-symbols-outlined text-primary text-5xl mb-6 block group-hover:scale-110 transition-transform">precision_manufacturing</span>
-                        <h3 className="text-2xl font-bold mb-4">Steel Fabrication</h3>
-                        <p className="text-slate-400 mb-6">Precision industrial forging for architectural features, structural frames, and bespoke metalwork that lasts a lifetime.</p>
-                        <ul className="space-y-2 text-sm text-slate-500">
-                            <li className="flex items-center gap-2"><span className="text-primary">•</span> Structural Steel</li>
-                            <li className="flex items-center gap-2"><span className="text-primary">•</span> Custom Staircases</li>
-                            <li className="flex items-center gap-2"><span className="text-primary">•</span> Industrial Furniture</li>
-                        </ul>
+                        <h3 className="text-2xl font-bold mb-4">Full Home & Interior Renovations</h3>
+                        <p className="text-slate-400 mb-6">Complete transformation of residential and commercial interiors including structural alterations, layout improvements, ceilings, plastering, tiling, painting, and finishing.</p>
                         <div className="spark spark-1"></div><div className="spark spark-2"></div><div className="spark spark-3"></div><div className="spark spark-4"></div>
                     </Reveal>
                     <Reveal direction="up" delay={0.3} className="p-10 border border-primary/10 bg-background-dark hover:border-primary/50 transition-all group expertise-card">
                         <span className="material-symbols-outlined text-primary text-5xl mb-6 block group-hover:scale-110 transition-transform">forest</span>
-                        <h3 className="text-2xl font-bold mb-4">Timber Structures</h3>
-                        <p className="text-slate-400 mb-6">Expertly sourced and carved timber frameworks that bring warmth and natural elegance to any modern space.</p>
-                        <ul className="space-y-2 text-sm text-slate-500">
-                            <li className="flex items-center gap-2"><span className="text-primary">•</span> Heavy Timber Framing</li>
-                            <li className="flex items-center gap-2"><span className="text-primary">•</span> Exposed Beam Design</li>
-                            <li className="flex items-center gap-2"><span className="text-primary">•</span> Pergolas & Pavilions</li>
-                        </ul>
+                        <h3 className="text-2xl font-bold mb-4">Luxury Bathroom Renovations</h3>
+                        <p className="text-slate-400 mb-6">High-end bathroom upgrades from demolition to final installation including waterproofing, tiling, plumbing preparation, and premium finishes.</p>
                         <div className="spark spark-1"></div><div className="spark spark-2"></div><div className="spark spark-3"></div><div className="spark spark-4"></div>
                     </Reveal>
                     <Reveal direction="up" delay={0.5} className="p-10 border border-primary/10 bg-background-dark hover:border-primary/50 transition-all group expertise-card">
                         <span className="material-symbols-outlined text-primary text-5xl mb-6 block group-hover:scale-110 transition-transform">architecture</span>
-                        <h3 className="text-2xl font-bold mb-4">Custom Constructions</h3>
-                        <p className="text-slate-400 mb-6">Bespoke architectural projects where we combine steel and wood into unique, functional art for your property.</p>
-                        <ul className="space-y-2 text-sm text-slate-500">
-                            <li className="flex items-center gap-2"><span className="text-primary">•</span> Hybrid Construction</li>
-                            <li className="flex items-center gap-2"><span className="text-primary">•</span> Modern Cabins</li>
-                            <li className="flex items-center gap-2"><span className="text-primary">•</span> Feature Entrances</li>
-                        </ul>
+                        <h3 className="text-2xl font-bold mb-4">Custom Steel & Timber Fabrication</h3>
+                        <p className="text-slate-400 mb-6">Bespoke steel and timber features including gates, pergolas, railings, structural elements, feature installations, and custom-built architectural pieces.</p>
                         <div className="spark spark-1"></div><div className="spark spark-2"></div><div className="spark spark-3"></div><div className="spark spark-4"></div>
                     </Reveal>
                 </div>

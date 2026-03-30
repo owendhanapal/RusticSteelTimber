@@ -14,21 +14,11 @@ export const AboutSection = () => {
                             Crafting Legacies in <span className="text-primary">Steel and Wood</span>
                         </h2>
                         <p className="text-lg text-slate-400 leading-relaxed">
-                            At Rustic Steel and Timber, we bridge the gap between industrial strength and organic warmth. Our philosophy is simple: celebrate the raw beauty of natural materials while utilizing modern engineering techniques.
+                            Rustic Steel and Timber is a renovation and construction company specialising in high-quality residential and commercial upgrades. Our services include full bathroom and bedroom renovations, building alterations, waterproofing and roof repairs, painting, decking, and custom steel and timber fabrication.
                         </p>
                         <p className="text-lg text-slate-400 leading-relaxed">
-                            Every joint we weld and every beam we carve is a testament to our commitment to durability and aesthetic excellence. We don't just build structures; we create environments that inspire.
+                            We focus on delivering durable workmanship, practical design solutions, and reliable project execution from demolition and preparation to final installation.
                         </p>
-                        <div className="grid grid-cols-2 gap-8 pt-4">
-                            <div>
-                                <div className="text-3xl font-bold text-primary mb-1">15+</div>
-                                <div className="text-xs uppercase tracking-widest text-slate-500">Years Experience</div>
-                            </div>
-                            <div>
-                                <div className="text-3xl font-bold text-primary mb-1">250+</div>
-                                <div className="text-xs uppercase tracking-widest text-slate-500">Projects Completed</div>
-                            </div>
-                        </div>
                     </Reveal>
                     <Reveal direction="right" className="relative group">
                         <div className="absolute -inset-4 bg-gradient-to-tr from-primary to-slate-400 rounded-[3rem] opacity-20 blur-2xl group-hover:opacity-40 transition-opacity duration-700"></div>

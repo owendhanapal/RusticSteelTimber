@@ -1,18 +1,42 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { motion } from 'motion/react';
 
 export const HeroSection = () => {
+    const videoRef = useRef<HTMLVideoElement>(null);
+    const [isPlaying, setIsPlaying] = useState(false);
+
+    // React sets `muted` as a property but not the attribute, which some browsers'
+    // autoplay policies ignore — so force it and start playback ourselves.
+    useEffect(() => {
+        const video = videoRef.current;
+        if (!video) return;
+        video.muted = true;
+        video.defaultMuted = true;
+        video.setAttribute('muted', '');
+
+        // Autoplay can start before React attaches handlers, so listen directly.
+        const reveal = () => setIsPlaying(true);
+        if (!video.paused && video.currentTime > 0) reveal();
+        video.addEventListener('playing', reveal);
+        video.addEventListener('timeupdate', reveal, { once: true });
+        video.play().catch(() => {});
+        return () => {
+            video.removeEventListener('playing', reveal);
+            video.removeEventListener('timeupdate', reveal);
+        };
+    }, []);
+
     return (
         <section className="relative h-screen w-full flex items-center justify-center overflow-hidden" id="home">
             <div className="absolute inset-0 z-0">
                 <video
-                    className="w-full h-full object-cover"
+                    ref={videoRef}
+                    className={`w-full h-full object-cover transition-opacity duration-700 ${isPlaying ? 'opacity-100' : 'opacity-0'}`}
                     autoPlay
                     muted
                     loop
                     playsInline
                     preload="auto"
-                    poster="https://lh3.googleusercontent.com/aida-public/AB6AXuDreQ6sLZQqCgVRqNXK2Z2f4odXpULizpuRk0tXbuaLbzZ1peq-rPctlUHBXU0oeXxPAjdNlLYGmR7-u5GKbdwed7rwq1y07uDa4MKPIbCZ8Eb-i9LBvzaK3cb0x6eOGGP8qv8gfQFZ6sfb0k3K08zdvNfn4oPDnAtvFstyvXc4r08CVgtfmWNLLKvwrkYd683nep9DQzP6Ivp36pfrrhWuLUNMYR7dxQ8pmP1WAv2dchFf7HjbK6RxYhrHUcXpmpGt6ZqXWAAhaiGD"
                 >
                     <source src="/videos/hero.mp4" type="video/mp4" />
                 </video>

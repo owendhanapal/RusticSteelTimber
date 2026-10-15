@@ -18,7 +18,7 @@ export const Navbar = () => {
             <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between relative z-[110]">
                 <Link to="/" className="flex items-center gap-3" onClick={() => setIsMenuOpen(false)}>
                     <span className="material-symbols-outlined text-primary text-3xl">architecture</span>
-                    <span className="text-xl font-bold tracking-tighter uppercase text-primary">Rustic Steel & Timber</span>
+                    <span className="text-xl font-bold tracking-tight text-primary">Rustic Steel and Timber</span>
                 </Link>
                 
                 {/* Desktop Menu */}

@@ -1,13 +1,7 @@
-import React, { useState } from 'react';
-import { Navbar } from '../components/ui/Navbar';
-import { Footer } from '../components/ui/Footer';
-import { projects, Project } from '../data/portfolioData';
-import { ProjectCard } from '../components/ui/ProjectCard';
-import { ProjectGallery } from '../components/ui/ProjectGallery';
+import React from 'react';
+import { ProjectShowcase } from '../components/ui/ProjectShowcase';
 
 export const Portfolio = () => {
-    const [selectedProject, setSelectedProject] = useState<Project | null>(null);
-
     return (
         <main className="pt-20">
             {/* Portfolio Header */}
@@ -15,33 +9,17 @@ export const Portfolio = () => {
                 <div className="max-w-7xl mx-auto px-6 text-center">
                     <h1 className="text-4xl md:text-6xl font-bold uppercase tracking-tighter mb-6">Our <span className="text-primary">Portfolio</span></h1>
                     <p className="text-slate-400 max-w-2xl mx-auto text-lg">
-                        Explore our complete collection of architectural masterpieces, where raw industrial strength meets the warmth of natural design.
+                        Explore our recent work, where raw industrial strength meets the warmth of natural design.
                     </p>
                 </div>
             </section>
 
-            {/* Portfolio Grid */}
+            {/* Portfolio Showcase */}
             <section className="py-24">
                 <div className="max-w-7xl mx-auto px-6">
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        {projects.map((project) => (
-                            <ProjectCard 
-                              key={project.id} 
-                              project={project} 
-                              onClick={(p) => setSelectedProject(p)} 
-                            />
-                        ))}
-                    </div>
+                    <ProjectShowcase />
                 </div>
             </section>
-
-            {/* Lightbox Gallery Modal */}
-            {selectedProject && (
-                <ProjectGallery 
-                    project={selectedProject} 
-                    onClose={() => setSelectedProject(null)} 
-                />
-            )}
         </main>
     );
 };

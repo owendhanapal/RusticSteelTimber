@@ -1,9 +1,9 @@
 @import "tailwindcss";
 
 @theme {
-  --font-display: "Space Grotesk", sans-serif;
+  --font-display: "Montserrat", sans-serif;
   --font-serif: "Playfair Display", serif;
-  --color-primary: #d4af35;
+  --color-primary: #E8AA07;
   --color-background-light: #f8f7f6;
   --color-background-dark: #12110e;
   --color-neutral-dark: #1c1a14;
@@ -20,7 +20,7 @@
 
 @layer components {
   .gold-shimmer {
-    background: linear-gradient(90deg, #d4af35 0%, #f9e297 50%, #d4af35 100%);
+    background: linear-gradient(90deg, #E8AA07 0%, #ffd766 50%, #E8AA07 100%);
     background-size: 200% auto;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -39,7 +39,7 @@
   }
 
   .gold-glow:hover {
-    box-shadow: 0 0 15px rgba(212, 175, 53, 0.6);
+    box-shadow: 0 0 15px rgba(232, 170, 7, 0.6);
   }
 
   .expertise-card {
@@ -47,7 +47,7 @@
   }
 
   .expertise-card:hover {
-    @apply -translate-y-2 shadow-[0_10px_30px_-10px_rgba(212,175,53,0.3)] border-primary/60!;
+    @apply -translate-y-2 shadow-[0_10px_30px_-10px_rgba(232,170,7,0.3)] border-primary/60!;
   }
 
   .spark {

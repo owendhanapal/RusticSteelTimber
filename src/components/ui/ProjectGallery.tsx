@@ -60,9 +60,8 @@ export const ProjectGallery: React.FC<ProjectGalleryProps> = ({ project, onClose
       {/* Project Info Header */}
       <div className="absolute top-6 left-6 z-[110] max-w-sm pointer-events-none">
         <h2 className="text-2xl sm:text-3xl font-bold text-white drop-shadow-lg">{project.title}</h2>
-        <p className="text-primary font-medium flex items-center gap-1 drop-shadow-md">
-          <span className="material-symbols-outlined text-[16px]">location_on</span>
-          {project.location}
+        <p className="text-primary font-medium flex items-center gap-1 drop-shadow-md uppercase tracking-widest text-sm">
+          {project.category}
         </p>
       </div>
 
